@@ -1,0 +1,1601 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- ========================================================
+       BASIC SETTINGS
+  ========================================================= -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080D14">
+
+  <title>VENTRON — Engineering starts in the field.</title>
+
+  <meta
+    name="description"
+    content="VENTRON is a European OEM developing the next generation of suction excavation equipment for infrastructure and industrial applications."
+  >
+
+
+  <!-- ========================================================
+       SOCIAL / WHATSAPP PREVIEW
+
+       LET OP:
+       Vervang YOUR-GITHUB-USERNAME hieronder later door
+       jouw echte GitHub gebruikersnaam.
+  ========================================================= -->
+
+  <meta
+    property="og:title"
+    content="VENTRON — Engineering starts in the field."
+  >
+
+  <meta
+    property="og:description"
+    content="VENTRON is developing the next generation of suction excavation equipment for infrastructure and industrial applications."
+  >
+
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:image"
+    content="https://maholdingbv.github.io/ventron-market-entry/assets/V%20only%20logo%20monochrome%20white.jpg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="VENTRON"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta
+    name="twitter:title"
+    content="VENTRON — Engineering starts in the field."
+  >
+
+  <meta
+    name="twitter:description"
+    content="VENTRON is developing the next generation of suction excavation equipment."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://maholdingbv.github.io/ventron-market-entry/assets/V%20only%20logo%20monochrome%20white.jpg"
+  >
+
+
+  <!-- ========================================================
+       STYLING
+  ========================================================= -->
+
+  <style>
+
+    :root {
+      --deep-graphite: #080D14;
+      --graphite: #171F2A;
+      --white: #F4F6F8;
+      --grey: #98A2AE;
+      --border-grey: #35404D;
+      --blue: #00B8F0;
+      --max-width: 1240px;
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family: Aptos, "Segoe UI", Arial, sans-serif;
+      background: var(--deep-graphite);
+      color: var(--white);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+
+    button {
+      font-family: inherit;
+    }
+
+
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: 0 auto;
+    }
+
+
+
+    /* ========================================================
+       HEADER
+    ========================================================= */
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      padding: 28px 0;
+    }
+
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+
+    .brand-logo {
+      width: 190px;
+      height: auto;
+    }
+
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+
+    .language-switcher {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+
+    .language-switcher button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--grey);
+      cursor: pointer;
+      font: inherit;
+      padding: 4px;
+      transition: color 0.2s ease;
+    }
+
+
+    .language-switcher button.active,
+    .language-switcher button:hover {
+      color: var(--white);
+    }
+
+
+    .top-cta {
+      border: 1px solid var(--border-grey);
+      padding: 11px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+
+    .top-cta:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+
+
+    /* ========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 150px 0 100px;
+    }
+
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(8,13,20,0.99) 0%,
+          rgba(8,13,20,0.95) 45%,
+          rgba(8,13,20,0.75) 70%,
+          rgba(8,13,20,0.55) 100%
+        );
+
+      z-index: 1;
+    }
+
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 580px;
+      height: 580px;
+      right: -240px;
+      bottom: -260px;
+      border: 1px solid rgba(0,184,240,0.22);
+      transform: rotate(45deg);
+    }
+
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+
+      background:
+        radial-gradient(
+          circle at 78% 55%,
+          rgba(0,184,240,0.10),
+          transparent 32%
+        );
+    }
+
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+    }
+
+
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 22px;
+    }
+
+
+    h1 {
+      font-size: clamp(48px, 7vw, 92px);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      font-weight: 700;
+      max-width: 900px;
+    }
+
+
+    .hero-copy {
+      margin-top: 34px;
+      max-width: 670px;
+      color: var(--grey);
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.55;
+    }
+
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+
+
+    /* ========================================================
+       BUTTONS
+    ========================================================= */
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 52px;
+
+      padding: 0 24px;
+
+      border: 1px solid var(--border-grey);
+
+      font-weight: 700;
+      font-size: 15px;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+
+    .button-primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: var(--deep-graphite);
+    }
+
+
+    .button-primary:hover {
+      background: var(--white);
+      border-color: var(--white);
+    }
+
+
+    .button-secondary:hover {
+      border-color: var(--white);
+    }
+
+
+
+    /* ========================================================
+       GENERAL SECTIONS
+    ========================================================= */
+
+    section.content-section {
+      padding: 120px 0;
+      border-top: 1px solid rgba(53,64,77,0.65);
+    }
+
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.4fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+
+    .section-label {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+
+    h2 {
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 28px;
+    }
+
+
+    .lead {
+      font-size: 21px;
+      color: var(--white);
+      max-width: 750px;
+    }
+
+
+    .supporting {
+      margin-top: 24px;
+      max-width: 720px;
+      color: var(--grey);
+      font-size: 17px;
+    }
+
+
+
+    /* ========================================================
+       POSITION
+    ========================================================= */
+
+    .position {
+      background: var(--graphite);
+    }
+
+
+    .statement {
+      margin-top: 50px;
+      padding-top: 34px;
+      border-top: 1px solid var(--border-grey);
+
+      font-size: clamp(26px, 3.2vw, 42px);
+      line-height: 1.2;
+      font-weight: 600;
+
+      max-width: 850px;
+    }
+
+
+
+    /* ========================================================
+       DEVELOPMENT PRINCIPLES
+    ========================================================= */
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 1px;
+
+      background: var(--border-grey);
+
+      margin-top: 70px;
+
+      border: 1px solid var(--border-grey);
+    }
+
+
+    .principle {
+      background: var(--deep-graphite);
+      padding: 38px;
+      min-height: 220px;
+    }
+
+
+    .principle-number {
+      display: block;
+      color: var(--blue);
+      font-size: 13px;
+      margin-bottom: 48px;
+    }
+
+
+    .principle h3 {
+      font-size: 23px;
+      margin-bottom: 14px;
+    }
+
+
+    .principle p {
+      color: var(--grey);
+      font-size: 15px;
+    }
+
+
+
+    /* ========================================================
+       WHATSAPP / CONTACT
+    ========================================================= */
+
+    .contact-section {
+      position: relative;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--graphite),
+          var(--deep-graphite)
+        );
+    }
+
+
+    .contact-inner {
+      max-width: 900px;
+    }
+
+
+    .contact-inner .lead {
+      margin-bottom: 20px;
+    }
+
+
+    .contact-inner .supporting {
+      margin-bottom: 38px;
+    }
+
+
+
+    /* ========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      border-top: 1px solid var(--border-grey);
+      padding: 38px 0;
+    }
+
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+
+      color: var(--grey);
+      font-size: 13px;
+    }
+
+
+    .footer-logo {
+      width: 145px;
+      height: auto;
+    }
+
+
+
+    /* ========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 800px) {
+
+      .nav-right {
+        gap: 14px;
+      }
+
+
+      .top-cta {
+        display: none;
+      }
+
+
+      .brand-logo {
+        width: 155px;
+      }
+
+
+      .hero {
+        min-height: auto;
+        padding-top: 180px;
+        padding-bottom: 100px;
+      }
+
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+
+      .principles {
+        grid-template-columns: 1fr;
+      }
+
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ========================================================
+       HEADER
+  ========================================================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#" aria-label="VENTRON home">
+
+        <img
+          class="brand-logo"
+          src="assets/Primary logo for dark background multi blue detail.svg"
+          alt="VENTRON"
+        >
+
+      </a>
+
+
+      <div class="nav-right">
+
+        <div
+          class="language-switcher"
+          aria-label="Language selection"
+        >
+
+          <button data-lang="nl">NL</button>
+          <button data-lang="fr">FR</button>
+          <button data-lang="de">DE</button>
+          <button data-lang="en" class="active">EN</button>
+
+        </div>
+
+
+        <a
+          class="top-cta js-whatsapp"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          data-i18n="navContact"
+        >
+          Talk to VENTRON
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- ========================================================
+       MAIN
+  ========================================================= -->
+
+  <main>
+
+
+    <!-- ======================================================
+         HERO
+    ======================================================= -->
+
+    <section class="hero">
+
+      <div class="hero-background"></div>
+
+
+      <div class="container">
+
+        <div class="hero-content">
+
+
+          <div
+            class="eyebrow"
+            data-i18n="heroEyebrow"
+          >
+            European OEM · Suction Excavation
+          </div>
+
+
+          <h1 data-i18n="heroTitle">
+            Engineering starts in the field.
+          </h1>
+
+
+          <p
+            class="hero-copy"
+            data-i18n="heroCopy"
+          >
+            VENTRON is developing the next generation of suction excavation
+            equipment for infrastructure and industrial applications.
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a
+              href="#approach"
+              class="button button-secondary"
+              data-i18n="heroSecondary"
+            >
+              Discover our approach
+            </a>
+
+
+            <a
+              href="#contact"
+              class="button button-primary"
+              data-i18n="heroPrimary"
+            >
+              Stay close to the development
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         WHY VENTRON
+    ======================================================= -->
+
+    <section
+      class="content-section position"
+      id="approach"
+    >
+
+      <div class="container section-grid">
+
+
+        <div>
+
+          <span
+            class="section-label"
+            data-i18n="positionLabel"
+          >
+            Why VENTRON
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <h2 data-i18n="positionTitle">
+            We didn't start by designing another suction excavator.
+          </h2>
+
+
+          <p
+            class="lead"
+            data-i18n="positionLead"
+          >
+            We started by questioning the assumptions behind one.
+          </p>
+
+
+          <p
+            class="supporting"
+            data-i18n="positionBody"
+          >
+            VENTRON combines engineering expertise, real-world experience
+            and continuous operator input to develop equipment around
+            practical performance, operational simplicity and long-term value.
+          </p>
+
+
+          <div
+            class="statement"
+            data-i18n="positionStatement"
+          >
+            Built on real-world experience.<br>
+            Engineered with purpose.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         ENGINEERING STARTS IN THE FIELD
+    ======================================================= -->
+
+    <section class="content-section">
+
+      <div class="container">
+
+
+        <div class="section-grid">
+
+
+          <div>
+
+            <span
+              class="section-label"
+              data-i18n="fieldLabel"
+            >
+              Engineering starts in the field
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <h2 data-i18n="fieldTitle">
+              Built with industry insight.
+            </h2>
+
+
+            <p
+              class="lead"
+              data-i18n="fieldLead"
+            >
+              The best engineering decisions start with understanding how
+              equipment is actually used.
+            </p>
+
+
+            <p
+              class="supporting"
+              data-i18n="fieldBody"
+            >
+              We work with operators, contractors and industry professionals
+              throughout the development process. Conversations, feedback,
+              practical experience and field testing help shape what comes next.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             LISTEN / IMPROVE / REPEAT
+        =================================================== -->
+
+        <div class="principles">
+
+
+          <article class="principle">
+
+            <span class="principle-number">
+              01
+            </span>
+
+            <h3 data-i18n="principle1Title">
+              Listen
+            </h3>
+
+            <p data-i18n="principle1Text">
+              Learn from the professionals who work with suction excavation
+              technology every day.
+            </p>
+
+          </article>
+
+
+
+          <article class="principle">
+
+            <span class="principle-number">
+              02
+            </span>
+
+            <h3 data-i18n="principle2Title">
+              Improve
+            </h3>
+
+            <p data-i18n="principle2Text">
+              Translate field experience into practical engineering decisions.
+            </p>
+
+          </article>
+
+
+
+          <article class="principle">
+
+            <span class="principle-number">
+              03
+            </span>
+
+            <h3 data-i18n="principle3Title">
+              Repeat
+            </h3>
+
+            <p data-i18n="principle3Text">
+              Test, learn and continuously improve the machine and the way it
+              is used.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         CONTACT / WHATSAPP
+    ======================================================= -->
+
+    <section
+      class="content-section contact-section"
+      id="contact"
+    >
+
+      <div class="container contact-inner">
+
+
+        <span
+          class="section-label"
+          data-i18n="contactLabel"
+        >
+          Stay close
+        </span>
+
+
+        <h2 data-i18n="contactTitle">
+          Experience with suction excavation?
+        </h2>
+
+
+        <p
+          class="lead"
+          data-i18n="contactLead"
+        >
+          We'd like to hear your perspective.
+        </p>
+
+
+        <p
+          class="supporting"
+          data-i18n="contactBody"
+        >
+          If you operate, own, manage or work closely with suction excavation
+          equipment, talk to us. Your practical experience can help us better
+          understand what matters in the field.
+        </p>
+
+
+        <a
+          href="#"
+          class="button button-primary js-whatsapp"
+          target="_blank"
+          rel="noopener"
+          data-i18n="contactButton"
+        >
+          Talk to VENTRON on WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ========================================================
+       FOOTER
+  ========================================================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+
+      <img
+        class="footer-logo"
+        src="assets/Primary logo monochrome white wordbrand.svg"
+        alt="VENTRON"
+      >
+
+
+      <div>
+
+        © <span id="year"></span> VENTRON.
+
+        <span data-i18n="footerText">
+          All rights reserved.
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- ========================================================
+       LANGUAGE + WHATSAPP
+  ========================================================= -->
+
+  <script>
+
+
+    /*
+    ============================================================
+    WHATSAPP CONFIGURATION
+
+    VERVANG DIT NUMMER DOOR HET ECHTE VENTRON NUMMER.
+
+    Internationaal formaat:
+    - geen +
+    - geen spaties
+    - geen streepjes
+
+    Voorbeeld:
+    31612345678
+    ============================================================
+    */
+
+    const whatsappNumber = "31636273933";
+
+
+
+    /*
+    ============================================================
+    TRANSLATIONS
+    ============================================================
+    */
+
+    const translations = {
+
+
+      /* ========================================================
+         ENGLISH
+      ========================================================= */
+
+      en: {
+
+        navContact:
+          "Talk to VENTRON",
+
+        heroEyebrow:
+          "European OEM · Suction Excavation",
+
+        heroTitle:
+          "Engineering starts in the field.",
+
+        heroCopy:
+          "VENTRON is developing the next generation of suction excavation equipment for infrastructure and industrial applications.",
+
+        heroSecondary:
+          "Discover our approach",
+
+        heroPrimary:
+          "Stay close to the development",
+
+
+        positionLabel:
+          "Why VENTRON",
+
+        positionTitle:
+          "We didn't start by designing another suction excavator.",
+
+        positionLead:
+          "We started by questioning the assumptions behind one.",
+
+        positionBody:
+          "VENTRON combines engineering expertise, real-world experience and continuous operator input to develop equipment around practical performance, operational simplicity and long-term value.",
+
+        positionStatement:
+          "Built on real-world experience.<br>Engineered with purpose.",
+
+
+        fieldLabel:
+          "Engineering starts in the field",
+
+        fieldTitle:
+          "Built with industry insight.",
+
+        fieldLead:
+          "The best engineering decisions start with understanding how equipment is actually used.",
+
+        fieldBody:
+          "We work with operators, contractors and industry professionals throughout the development process. Conversations, feedback, practical experience and field testing help shape what comes next.",
+
+
+        principle1Title:
+          "Listen",
+
+        principle1Text:
+          "Learn from the professionals who work with suction excavation technology every day.",
+
+
+        principle2Title:
+          "Improve",
+
+        principle2Text:
+          "Translate field experience into practical engineering decisions.",
+
+
+        principle3Title:
+          "Repeat",
+
+        principle3Text:
+          "Test, learn and continuously improve the machine and the way it is used.",
+
+
+        contactLabel:
+          "Stay close",
+
+        contactTitle:
+          "Experience with suction excavation?",
+
+        contactLead:
+          "We'd like to hear your perspective.",
+
+        contactBody:
+          "If you operate, own, manage or work closely with suction excavation equipment, talk to us. Your practical experience can help us better understand what matters in the field.",
+
+        contactButton:
+          "Talk to VENTRON on WhatsApp",
+
+        whatsappMessage:
+          "Hi VENTRON, I'd like to stay connected with what you're developing.",
+
+        footerText:
+          "All rights reserved."
+
+      },
+
+
+
+      /* ========================================================
+         NEDERLANDS
+      ========================================================= */
+
+      nl: {
+
+        navContact:
+          "Praat met VENTRON",
+
+        heroEyebrow:
+          "Europese OEM · Grondzuigtechniek",
+
+        heroTitle:
+          "Engineering starts in the field.",
+
+        heroCopy:
+          "VENTRON ontwikkelt de volgende generatie grondzuigmachines voor toepassingen binnen infrastructuur en industrie.",
+
+        heroSecondary:
+          "Ontdek onze aanpak",
+
+        heroPrimary:
+          "Blijf betrokken bij de ontwikkeling",
+
+
+        positionLabel:
+          "Waarom VENTRON",
+
+        positionTitle:
+          "We zijn niet begonnen met het ontwerpen van nóg een grondzuiger.",
+
+        positionLead:
+          "We begonnen met het ter discussie stellen van de uitgangspunten erachter.",
+
+        positionBody:
+          "VENTRON combineert technische expertise, praktijkervaring en continue input van operators om machines te ontwikkelen rond praktische prestaties, operationele eenvoud en waarde op lange termijn.",
+
+        positionStatement:
+          "Gebouwd op praktijkervaring.<br>Doelgericht ontwikkeld.",
+
+
+        fieldLabel:
+          "Engineering starts in the field",
+
+        fieldTitle:
+          "Ontwikkeld met kennis uit de praktijk.",
+
+        fieldLead:
+          "De beste technische beslissingen beginnen met begrijpen hoe machines daadwerkelijk worden gebruikt.",
+
+        fieldBody:
+          "Tijdens het ontwikkelproces werken we samen met operators, aannemers en professionals uit de sector. Gesprekken, feedback, praktijkervaring en veldtesten helpen bepalen wat de volgende stap wordt.",
+
+
+        principle1Title:
+          "Luisteren",
+
+        principle1Text:
+          "Leren van professionals die dagelijks met grondzuigtechniek werken.",
+
+
+        principle2Title:
+          "Verbeteren",
+
+        principle2Text:
+          "Praktijkervaring vertalen naar doelgerichte technische keuzes.",
+
+
+        principle3Title:
+          "Herhalen",
+
+        principle3Text:
+          "Testen, leren en de machine en het gebruik ervan continu verbeteren.",
+
+
+        contactLabel:
+          "Blijf dichtbij",
+
+        contactTitle:
+          "Ervaring met grondzuigtechniek?",
+
+        contactLead:
+          "We horen graag jouw perspectief.",
+
+        contactBody:
+          "Werk je als operator, eigenaar, fleetmanager of op een andere manier nauw met grondzuigmachines? Neem contact met ons op. Jouw praktijkervaring helpt ons beter te begrijpen wat er in het veld echt toe doet.",
+
+        contactButton:
+          "Praat met VENTRON via WhatsApp",
+
+        whatsappMessage:
+          "Hallo VENTRON, ik blijf graag op de hoogte van waar jullie aan werken.",
+
+        footerText:
+          "Alle rechten voorbehouden."
+
+      },
+
+
+
+      /* ========================================================
+         DEUTSCH
+      ========================================================= */
+
+      de: {
+
+        navContact:
+          "Mit VENTRON sprechen",
+
+        heroEyebrow:
+          "Europäischer OEM · Saugbagger",
+
+        heroTitle:
+          "Engineering starts in the field.",
+
+        heroCopy:
+          "VENTRON entwickelt die nächste Generation von Saugbaggern für Infrastruktur- und Industrieanwendungen.",
+
+        heroSecondary:
+          "Unseren Ansatz entdecken",
+
+        heroPrimary:
+          "Nah an der Entwicklung bleiben",
+
+
+        positionLabel:
+          "Warum VENTRON",
+
+        positionTitle:
+          "Wir haben nicht damit begonnen, einen weiteren Saugbagger zu konstruieren.",
+
+        positionLead:
+          "Wir haben damit begonnen, die bestehenden Grundannahmen zu hinterfragen.",
+
+        positionBody:
+          "VENTRON verbindet Engineering-Kompetenz, Praxiserfahrung und kontinuierliches Feedback von Anwendern, um Maschinen mit Fokus auf praktische Leistung, einfache Bedienung und langfristigen Nutzen zu entwickeln.",
+
+        positionStatement:
+          "Auf Praxiserfahrung aufgebaut.<br>Mit klarem Zweck entwickelt.",
+
+
+        fieldLabel:
+          "Engineering starts in the field",
+
+        fieldTitle:
+          "Entwickelt mit Wissen aus der Praxis.",
+
+        fieldLead:
+          "Die besten technischen Entscheidungen beginnen mit dem Verständnis dafür, wie Maschinen tatsächlich eingesetzt werden.",
+
+        fieldBody:
+          "Während des Entwicklungsprozesses arbeiten wir mit Anwendern, Bauunternehmen und Branchenexperten zusammen. Gespräche, Feedback, Praxiserfahrung und Feldtests helfen dabei, die nächsten Entwicklungsschritte zu gestalten.",
+
+
+        principle1Title:
+          "Zuhören",
+
+        principle1Text:
+          "Von Fachleuten lernen, die täglich mit Saugbaggertechnik arbeiten.",
+
+
+        principle2Title:
+          "Verbessern",
+
+        principle2Text:
+          "Praxiserfahrung in zielgerichtete technische Entscheidungen übersetzen.",
+
+
+        principle3Title:
+          "Weiterentwickeln",
+
+        principle3Text:
+          "Testen, lernen und Maschine sowie Anwendung kontinuierlich verbessern.",
+
+
+        contactLabel:
+          "Bleiben Sie nah dran",
+
+        contactTitle:
+          "Erfahrung mit Saugbaggertechnik?",
+
+        contactLead:
+          "Ihre Perspektive interessiert uns.",
+
+        contactBody:
+          "Wenn Sie Saugbagger bedienen, besitzen, managen oder eng mit dieser Technik arbeiten, sprechen Sie mit uns. Ihre praktische Erfahrung hilft uns besser zu verstehen, worauf es im Einsatz wirklich ankommt.",
+
+        contactButton:
+          "Mit VENTRON über WhatsApp sprechen",
+
+        whatsappMessage:
+          "Hallo VENTRON, ich möchte gerne verfolgen, woran Sie arbeiten.",
+
+        footerText:
+          "Alle Rechte vorbehalten."
+
+      },
+
+
+
+      /* ========================================================
+         FRANÇAIS
+      ========================================================= */
+
+      fr: {
+
+        navContact:
+          "Parler avec VENTRON",
+
+        heroEyebrow:
+          "OEM européen · Excavation par aspiration",
+
+        heroTitle:
+          "Engineering starts in the field.",
+
+        heroCopy:
+          "VENTRON développe la nouvelle génération d'excavatrices-aspiratrices pour les applications d'infrastructure et industrielles.",
+
+        heroSecondary:
+          "Découvrir notre approche",
+
+        heroPrimary:
+          "Suivre le développement",
+
+
+        positionLabel:
+          "Pourquoi VENTRON",
+
+        positionTitle:
+          "Nous n'avons pas commencé par concevoir une excavatrice-aspiratrice de plus.",
+
+        positionLead:
+          "Nous avons commencé par remettre en question les principes existants.",
+
+        positionBody:
+          "VENTRON associe expertise technique, expérience terrain et retours continus des opérateurs afin de développer des machines axées sur la performance pratique, la simplicité opérationnelle et la valeur à long terme.",
+
+        positionStatement:
+          "Fondé sur l'expérience terrain.<br>Conçu avec un objectif clair.",
+
+
+        fieldLabel:
+          "Engineering starts in the field",
+
+        fieldTitle:
+          "Développé avec l'expérience du terrain.",
+
+        fieldLead:
+          "Les meilleures décisions techniques commencent par comprendre comment les machines sont réellement utilisées.",
+
+        fieldBody:
+          "Tout au long du développement, nous travaillons avec des opérateurs, des entreprises de travaux et des professionnels du secteur. Les échanges, les retours d'expérience et les essais terrain contribuent à orienter la suite du développement.",
+
+
+        principle1Title:
+          "Écouter",
+
+        principle1Text:
+          "Apprendre auprès des professionnels qui utilisent quotidiennement les technologies d'excavation par aspiration.",
+
+
+        principle2Title:
+          "Améliorer",
+
+        principle2Text:
+          "Transformer l'expérience terrain en décisions techniques pertinentes.",
+
+
+        principle3Title:
+          "Progresser",
+
+        principle3Text:
+          "Tester, apprendre et améliorer continuellement la machine et son utilisation.",
+
+
+        contactLabel:
+          "Restez proche",
+
+        contactTitle:
+          "Vous avez de l'expérience en excavation par aspiration ?",
+
+        contactLead:
+          "Votre point de vue nous intéresse.",
+
+        contactBody:
+          "Si vous utilisez, possédez ou gérez des excavatrices-aspiratrices, ou travaillez régulièrement avec cette technologie, échangez avec nous. Votre expérience pratique nous aide à mieux comprendre ce qui compte réellement sur le terrain.",
+
+        contactButton:
+          "Parler avec VENTRON sur WhatsApp",
+
+        whatsappMessage:
+          "Bonjour VENTRON, je souhaite rester informé de ce que vous développez.",
+
+        footerText:
+          "Tous droits réservés."
+
+      }
+
+    };
+
+
+
+    /*
+    ============================================================
+    LANGUAGE SWITCH
+    ============================================================
+    */
+
+    let currentLanguage = "en";
+
+
+    function setLanguage(lang) {
+
+      currentLanguage = lang;
+
+      document.documentElement.lang = lang;
+
+
+      document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+          const key =
+            element.getAttribute("data-i18n");
+
+          if (translations[lang][key]) {
+
+            element.innerHTML =
+              translations[lang][key];
+
+          }
+
+        });
+
+
+      document
+        .querySelectorAll(".language-switcher button")
+        .forEach(button => {
+
+          button.classList.toggle(
+            "active",
+            button.dataset.lang === lang
+          );
+
+        });
+
+
+      updateWhatsAppLinks();
+
+
+      localStorage.setItem(
+        "ventron-language",
+        lang
+      );
+
+    }
+
+
+
+    /*
+    ============================================================
+    WHATSAPP
+    ============================================================
+    */
+
+    function updateWhatsAppLinks() {
+
+      const message =
+        translations[currentLanguage].whatsappMessage;
+
+
+      const url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+      document
+        .querySelectorAll(".js-whatsapp")
+        .forEach(link => {
+
+          link.href = url;
+
+        });
+
+    }
+
+
+
+    /*
+    ============================================================
+    LANGUAGE BUTTONS
+    ============================================================
+    */
+
+    document
+      .querySelectorAll(".language-switcher button")
+      .forEach(button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            setLanguage(
+              button.dataset.lang
+            );
+
+          }
+        );
+
+      });
+
+
+
+    /*
+    ============================================================
+    INITIAL LANGUAGE
+    ============================================================
+    */
+
+    const savedLanguage =
+      localStorage.getItem("ventron-language");
+
+
+    const browserLanguage =
+      navigator.language.slice(0, 2);
+
+
+    const supportedLanguages =
+      ["nl", "fr", "de", "en"];
+
+
+    const initialLanguage =
+      savedLanguage ||
+      (
+        supportedLanguages.includes(browserLanguage)
+          ? browserLanguage
+          : "en"
+      );
+
+
+    setLanguage(initialLanguage);
+
+
+
+    /*
+    ============================================================
+    COPYRIGHT YEAR
+    ============================================================
+    */
+
+    document
+      .getElementById("year")
+      .textContent =
+        new Date().getFullYear();
+
+
+  </script>
+
+
+</body>
+
+</html>
+```

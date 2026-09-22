@@ -10,7 +10,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080D14">
-  <meta name="ventron-content-version" content="2026-09-22-2">
+  <meta name="ventron-content-version" content="2026-09-22-roadmap-v2">
 
   <title>VENTRON — Engineering starts in the field.</title>
 
@@ -495,6 +495,82 @@
     }
 
 
+    /* ROADMAP */
+
+    .roadmap-section {
+      background: var(--graphite);
+    }
+
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 64px;
+    }
+
+    .roadmap-step {
+      position: relative;
+      min-height: 205px;
+      padding: 28px;
+      border: 1px solid var(--border-grey);
+      background: var(--deep-graphite);
+    }
+
+    .roadmap-step.completed {
+      opacity: 0.68;
+    }
+
+    .roadmap-step.current {
+      border-color: var(--blue);
+      background:
+        linear-gradient(145deg, rgba(0,184,240,0.14), transparent 68%),
+        var(--deep-graphite);
+      box-shadow: inset 0 3px 0 var(--blue);
+    }
+
+    .roadmap-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    .roadmap-number {
+      color: var(--grey);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .roadmap-step.current .roadmap-number {
+      color: var(--blue);
+    }
+
+    .roadmap-status {
+      color: var(--grey);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .roadmap-step.current .roadmap-status {
+      color: var(--blue);
+    }
+
+    .roadmap-step h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .roadmap-step p {
+      color: var(--grey);
+      font-size: 14px;
+    }
+
+
     /* CONTACT */
 
     .contact-section {
@@ -579,6 +655,14 @@
       }
 
       .priority-card {
+        min-height: auto;
+      }
+
+      .roadmap-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .roadmap-step {
         min-height: auto;
       }
 
@@ -965,6 +1049,118 @@
     </section>
 
 
+    <!-- DEVELOPMENT ROADMAP -->
+
+    <section class="content-section roadmap-section">
+
+      <div class="container">
+
+        <div class="section-grid">
+
+          <div>
+
+            <span class="section-label" data-i18n="roadmapLabel">
+              Development roadmap
+            </span>
+
+          </div>
+
+          <div>
+
+            <h2 data-i18n="roadmapTitle">
+              From field insight to field validation.
+            </h2>
+
+            <p class="lead" data-i18n="roadmapLead">
+              The MACH ONE is being developed, built and validated step by step.
+              Each milestone brings the concept closer to measurable performance in the field.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="roadmap-grid">
+
+          <article class="roadmap-step completed">
+            <div class="roadmap-topline">
+              <span class="roadmap-number">01</span>
+              <span class="roadmap-status" data-i18n="roadmapComplete">Completed</span>
+            </div>
+            <h3 data-i18n="roadmap1Title">Field research</h3>
+            <p data-i18n="roadmap1Text">Field experience, operator input and requirements.</p>
+          </article>
+
+          <article class="roadmap-step completed">
+            <div class="roadmap-topline">
+              <span class="roadmap-number">02</span>
+              <span class="roadmap-status" data-i18n="roadmapComplete">Completed</span>
+            </div>
+            <h3 data-i18n="roadmap2Title">Concept development</h3>
+            <p data-i18n="roadmap2Text">System concept and machine architecture.</p>
+          </article>
+
+          <article class="roadmap-step current" aria-current="step">
+            <div class="roadmap-topline">
+              <span class="roadmap-number">03</span>
+              <span class="roadmap-status" data-i18n="roadmapCurrent">Current phase</span>
+            </div>
+            <h3 data-i18n="roadmap3Title">Digital engineering</h3>
+            <p data-i18n="roadmap3Text">Volume model and packaging validation.</p>
+          </article>
+
+          <article class="roadmap-step">
+            <div class="roadmap-topline">
+              <span class="roadmap-number">04</span>
+              <span class="roadmap-status" data-i18n="roadmapNext">Next</span>
+            </div>
+            <h3 data-i18n="roadmap4Title">Prototype approval</h3>
+            <p data-i18n="roadmap4Text">Cost, budget and build validation.</p>
+          </article>
+
+          <article class="roadmap-step">
+            <div class="roadmap-topline">
+              <span class="roadmap-number">05</span>
+              <span class="roadmap-status" data-i18n="roadmapNext">Next</span>
+            </div>
+            <h3 data-i18n="roadmap5Title">Procurement</h3>
+            <p data-i18n="roadmap5Text">Materials, components and supplier coordination.</p>
+          </article>
+
+          <article class="roadmap-step">
+            <div class="roadmap-topline">
+              <span class="roadmap-number">06</span>
+              <span class="roadmap-status" data-i18n="roadmapNext">Next</span>
+            </div>
+            <h3 data-i18n="roadmap6Title">Prototype build</h3>
+            <p data-i18n="roadmap6Text">Construction, surface treatment and final assembly.</p>
+          </article>
+
+          <article class="roadmap-step">
+            <div class="roadmap-topline">
+              <span class="roadmap-number">07</span>
+              <span class="roadmap-status" data-i18n="roadmapNext">Next</span>
+            </div>
+            <h3 data-i18n="roadmap7Title">Commissioning</h3>
+            <p data-i18n="roadmap7Text">System integration, setup and functional checks.</p>
+          </article>
+
+          <article class="roadmap-step">
+            <div class="roadmap-topline">
+              <span class="roadmap-number">08</span>
+              <span class="roadmap-status" data-i18n="roadmapNext">Next</span>
+            </div>
+            <h3 data-i18n="roadmap8Title">Field validation</h3>
+            <p data-i18n="roadmap8Text">Testing, measuring, learning and improving.</p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
     <!-- CONTACT / WHATSAPP -->
 
     <section
@@ -1159,6 +1355,29 @@
         principle3Text:
           "Test, learn and continuously improve the machine and the way it is used.",
 
+        roadmapLabel: "Development roadmap",
+        roadmapTitle: "From field insight to field validation.",
+        roadmapLead: "The MACH ONE is being developed, built and validated step by step. Each milestone brings the concept closer to measurable performance in the field.",
+        roadmapComplete: "Completed",
+        roadmapCurrent: "Current phase",
+        roadmapNext: "Next",
+        roadmap1Title: "Field research",
+        roadmap1Text: "Field experience, operator input and requirements.",
+        roadmap2Title: "Concept development",
+        roadmap2Text: "System concept and machine architecture.",
+        roadmap3Title: "Digital engineering",
+        roadmap3Text: "Volume model, technical development and production-ready design.",
+        roadmap4Title: "Prototype approval",
+        roadmap4Text: "Cost, budget and build validation.",
+        roadmap5Title: "Procurement",
+        roadmap5Text: "Materials, components and supplier coordination.",
+        roadmap6Title: "Prototype build",
+        roadmap6Text: "Construction, surface treatment and final assembly.",
+        roadmap7Title: "Commissioning",
+        roadmap7Text: "System integration, setup and functional checks.",
+        roadmap8Title: "Field validation",
+        roadmap8Text: "Testing, measuring, learning and improving.",
+
         contactLabel:
           "Stay close",
 
@@ -1277,6 +1496,29 @@
 
         principle3Text:
           "Testen, leren en de machine en het gebruik ervan continu verbeteren.",
+
+        roadmapLabel: "Ontwikkelroadmap",
+        roadmapTitle: "Van praktijkinzicht naar praktijkvalidatie.",
+        roadmapLead: "De MACH ONE wordt stapsgewijs ontwikkeld, gebouwd en gevalideerd. Iedere mijlpaal brengt het concept dichter bij meetbare prestaties in de praktijk.",
+        roadmapComplete: "Afgerond",
+        roadmapCurrent: "Huidige fase",
+        roadmapNext: "Volgende stap",
+        roadmap1Title: "Praktijkonderzoek",
+        roadmap1Text: "Praktijkervaring, operatorinput en functionele eisen.",
+        roadmap2Title: "Conceptontwikkeling",
+        roadmap2Text: "Systeemconcept en machinearchitectuur.",
+        roadmap3Title: "Digital engineering",
+        roadmap3Text: "Volumemodel, technische uitwerking en productierijp ontwerp.",
+        roadmap4Title: "Prototypevrijgave",
+        roadmap4Text: "Validatie van kosten, budget en maakbaarheid.",
+        roadmap5Title: "Inkoop",
+        roadmap5Text: "Materialen, componenten en afstemming met leveranciers.",
+        roadmap6Title: "Prototypebouw",
+        roadmap6Text: "Constructie, oppervlaktebehandeling en eindassemblage.",
+        roadmap7Title: "Ingebruikname",
+        roadmap7Text: "Systeemintegratie, afstelling en functionele controles.",
+        roadmap8Title: "Praktijkvalidatie",
+        roadmap8Text: "Testen, meten, leren en verbeteren.",
 
         contactLabel:
           "Blijf dichtbij",
@@ -1397,6 +1639,29 @@
         principle3Text:
           "Testen, lernen und Maschine sowie Anwendung kontinuierlich verbessern.",
 
+        roadmapLabel: "Entwicklungsroadmap",
+        roadmapTitle: "Von Praxiserkenntnissen zur Validierung im Einsatz.",
+        roadmapLead: "Die MACH ONE wird Schritt für Schritt entwickelt, gebaut und validiert. Jeder Meilenstein bringt das Konzept messbarer Leistung im Einsatz näher.",
+        roadmapComplete: "Abgeschlossen",
+        roadmapCurrent: "Aktuelle Phase",
+        roadmapNext: "Nächster Schritt",
+        roadmap1Title: "Praxisforschung",
+        roadmap1Text: "Praxiserfahrung, Anwenderfeedback und Anforderungen.",
+        roadmap2Title: "Konzeptentwicklung",
+        roadmap2Text: "Systemkonzept und Maschinenarchitektur.",
+        roadmap3Title: "Digital Engineering",
+        roadmap3Text: "Volumenmodell, technische Ausarbeitung und produktionsreifes Design.",
+        roadmap4Title: "Prototypenfreigabe",
+        roadmap4Text: "Validierung von Kosten, Budget und Fertigbarkeit.",
+        roadmap5Title: "Beschaffung",
+        roadmap5Text: "Materialien, Komponenten und Lieferantenkoordination.",
+        roadmap6Title: "Prototypenbau",
+        roadmap6Text: "Konstruktion, Oberflächenbehandlung und Endmontage.",
+        roadmap7Title: "Inbetriebnahme",
+        roadmap7Text: "Systemintegration, Einrichtung und Funktionsprüfungen.",
+        roadmap8Title: "Validierung im Einsatz",
+        roadmap8Text: "Testen, messen, lernen und verbessern.",
+
         contactLabel:
           "Bleiben Sie nah dran",
 
@@ -1515,6 +1780,29 @@
 
         principle3Text:
           "Tester, apprendre et améliorer continuellement la machine et son utilisation.",
+
+        roadmapLabel: "Feuille de route du développement",
+        roadmapTitle: "De l'expérience terrain à la validation sur le terrain.",
+        roadmapLead: "La MACH ONE est développée, construite et validée étape par étape. Chaque jalon rapproche le concept de performances mesurables sur le terrain.",
+        roadmapComplete: "Terminé",
+        roadmapCurrent: "Phase actuelle",
+        roadmapNext: "Étape suivante",
+        roadmap1Title: "Étude terrain",
+        roadmap1Text: "Expérience pratique, retours des opérateurs et exigences.",
+        roadmap2Title: "Développement du concept",
+        roadmap2Text: "Concept système et architecture de la machine.",
+        roadmap3Title: "Ingénierie numérique",
+        roadmap3Text: "Modèle volumique, développement technique et conception prête pour la production.",
+        roadmap4Title: "Validation du prototype",
+        roadmap4Text: "Validation des coûts, du budget et de la fabricabilité.",
+        roadmap5Title: "Approvisionnement",
+        roadmap5Text: "Matériaux, composants et coordination des fournisseurs.",
+        roadmap6Title: "Construction du prototype",
+        roadmap6Text: "Construction, traitement de surface et assemblage final.",
+        roadmap7Title: "Mise en service",
+        roadmap7Text: "Intégration des systèmes, réglages et contrôles fonctionnels.",
+        roadmap8Title: "Validation terrain",
+        roadmap8Text: "Tester, mesurer, apprendre et améliorer.",
 
         contactLabel:
           "Restez proche",
